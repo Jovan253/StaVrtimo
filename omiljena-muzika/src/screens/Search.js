@@ -8,7 +8,8 @@ export default function Search() {
   const [token, setToken] = useState(null);
 
   const getToken = async () => {
-    const res = await fetch("http://localhost:4000/spotify-token");
+    const API_URL = "https://sta-vrtimo-backend.vercel.app" || "http://localhost:4000";
+    const res = await fetch(`${API_URL}/spotify-token`);
     const data = await res.json();
     setToken(data.access_token);
     // refresh a bit before expiry
