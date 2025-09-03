@@ -7,7 +7,7 @@ import cors from "cors";
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "http://localhost:3000" }));
+app.use(cors({ origin: ["http://localhost:3000", "https://sta-vrtimo.vercel.app"]}));
 
 app.get("/spotify-token", async (req, res) => {
   const auth = Buffer.from(
