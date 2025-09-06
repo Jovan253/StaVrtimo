@@ -11,11 +11,12 @@ import { db } from "../firebase";
 
 export async function addSong(song, listType) {
   const songsRef = collection(db, "songs");
+  const name = listType == "K" ? "Kikica" : "Mrvica";
 
   const q = query(songsRef, where("list", "==", listType));
   const snapshot = await getDocs(q);
   if (snapshot.size >= 5) {
-    throw new Error(`${listType} is full (max 5). Delete one first.`);
+    throw new Error(`${name} is full (max 5). Delete one first.`);
   }
 
   return await addDoc(songsRef, { ...song, list: listType });
