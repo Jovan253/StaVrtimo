@@ -55,6 +55,7 @@ nav {
   margin: 2rem auto;
   margin-top: 50px;
   padding: 2rem;
+  justify-content: center;
 }
 
 .section {
