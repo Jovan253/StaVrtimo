@@ -3,6 +3,7 @@ import { getSongs, deleteSong } from "../utils/SongDB";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import Footer from "./Footer";
 
 
 export default function List() {
@@ -84,6 +85,7 @@ export default function List() {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

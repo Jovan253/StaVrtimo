@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import { addSong } from "../utils/SongDB";
+import Footer from "./Footer";
 
 export default function Search() {
   const [query, setQuery] = useState("");
@@ -99,6 +100,7 @@ export default function Search() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }
