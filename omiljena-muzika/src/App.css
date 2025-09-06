@@ -78,7 +78,7 @@ li {
   display: flex;
   align-items: center;      
   color: white;
-  font-size: 24px;  
+  font-size: 24px;
 }
 
 li button {
@@ -177,7 +177,11 @@ a:visited {
     font-size: 22px;
   }
 
-  li, .result-item {
+  .result-item {
+    font-size: 18px;
+  }
+
+  li {
     font-size: 18px;
   }
 

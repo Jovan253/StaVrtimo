@@ -34,7 +34,7 @@ export default function List() {
           <h3>Kikica:</h3>
           <ul>
             {songsK.map((song) => (
-              <li key={song.id}>
+              <li key={song.id} className="list-item">
                 <img
                   src={song.image}
                   alt={song.title}
@@ -45,10 +45,12 @@ export default function List() {
                     marginRight: "10px",
                   }}
                 />
-                <a href={song.url} target="_blank" rel="noopener noreferrer">
-                  {song.title}
-                </a>&nbsp;
-                - {song.artist}
+                <div className="info">
+                  <a href={song.url} target="_blank" rel="noopener noreferrer">
+                    {song.title}
+                  </a>
+                  <span className="arist"> - {song.artist}</span> 
+                </div>                
                 <button onClick={() => handleDelete(song.id)}><FontAwesomeIcon icon={faTrash} color="white"/></button>
               </li>
             ))}
@@ -59,7 +61,7 @@ export default function List() {
           <h3>Mrvica:</h3>
           <ul className="list-items">
             {songsM.map((song) => (
-              <li key={song.id}>
+              <li key={song.id} className="list-item">
                 <img
                   src={song.image}
                   alt={song.title}
@@ -70,10 +72,12 @@ export default function List() {
                     marginRight: "10px",
                   }}
                 />
-                <a href={song.url} target="_blank" rel="noopener noreferrer">
-                  {song.title}
-                </a>&nbsp;
-                - {song.artist}
+                <div className="info">
+                  <a href={song.url} target="_blank" rel="noopener noreferrer">
+                    {song.title}
+                  </a>
+                  <span className="arist"> - {song.artist}</span> 
+                </div>                
                 <button onClick={() => handleDelete(song.id)}><FontAwesomeIcon icon={faTrash} color="white"/></button>
               </li>
             ))}
