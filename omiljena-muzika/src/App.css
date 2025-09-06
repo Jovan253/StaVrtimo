@@ -10,8 +10,9 @@ html, body {
   text-align: center;
   background-color: #212328;
   min-height: 100vh;
-  min-width: 100vh;
-  padding: 2rem;
+  /* min-width: 100vw; */
+  width: 100%;
+  /* padding: 2rem; */
   color: rgb(227, 13, 84);
 }
 
@@ -30,6 +31,7 @@ h2, h3 {
 
 h1 {
   font-size: 42px;
+  padding: 1rem;
 }
 
 h2 {
@@ -52,6 +54,7 @@ nav {
   max-width: 1000px;
   margin: 2rem auto;
   margin-top: 50px;
+  padding: 2rem;
 }
 
 .section {
@@ -92,6 +95,8 @@ li button {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .search-bar input {
@@ -122,6 +127,8 @@ li button {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .result-item {
@@ -154,21 +161,23 @@ a:visited {
   color: white;
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 @media (max-width: 768px) {
   .sections {
     grid-template-columns: 1fr; /* stack lists vertically */
     gap: 1rem;
     margin-top: 20px;
-  }  
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  li, .result-item {
+    font-size: 18px;
+  }
 
 }
